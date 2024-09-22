@@ -29,14 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
   let isScrolling = false;
 
-  // Add a scroll event listener
   window.addEventListener('wheel', function (event) {
-    if (isScrolling) return; // Prevent multiple scrolls at the same time
+    if (isScrolling) return;
 
-    // Determine scroll direction
     const direction = event.deltaY > 0 ? 1 : -1;
 
-    // Find the currently active section
     const currentSection = Array.from(sections).find((section) => {
       return (
         window.scrollY >= section.offsetTop &&
@@ -47,25 +44,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentSection) {
       let nextSection;
       if (direction === 1) {
-        // Scroll down, go to the next section
         nextSection = currentSection.nextElementSibling;
       } else {
-        // Scroll up, go to the previous section
         nextSection = currentSection.previousElementSibling;
       }
 
       if (nextSection) {
         isScrolling = true;
 
-        // Scroll to the next section smoothly
         nextSection.scrollIntoView({
           behavior: 'smooth',
         });
 
-        // Prevent rapid scrolling by setting a timeout
         setTimeout(() => {
           isScrolling = false;
-        }, 1000); // Adjust the timeout duration if needed
+        }, 1000);
       }
     }
   });
@@ -74,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const projectListItems = document.querySelectorAll('.project-list ul li');
   const projectContent = document.getElementById('project-content');
 
-  // Project details data
   const projects = {
     project1: {
       title: 'Project 1',
@@ -98,19 +90,24 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   };
 
-  // Add click event to each project list item
   projectListItems.forEach((item) => {
     item.addEventListener('click', function () {
-      // Remove active class from all items and add to the clicked one
       projectListItems.forEach((li) => li.classList.remove('active'));
       this.classList.add('active');
 
-      // Get project ID and update the content
       const projectId = this.getAttribute('data-project');
       projectContent.innerHTML = `
               <h2>${projects[projectId].title}</h2>
               <p>${projects[projectId].description}</p>
           `;
     });
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.getElementById('nav-links');
+
+  menuIcon.addEventListener('click', function () {
+    navLinks.classList.toggle('show');
   });
 });

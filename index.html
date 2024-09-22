@@ -23,8 +23,9 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">DOOM</div>
-        <ul>
+        <div class="logo"><img src="./assets/tetris.png" /></div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <ul id="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -32,92 +33,90 @@
         </ul>
       </nav>
     </header>
-
-    <section id="home">
-      <div class="content">
-        <h1 class="intro" id="name">Hello, I'm <span> Apurv</span></h1>
-        <p>Creative Developer | Problem Solver | Tech Enthusiast</p>
-        <a href="#projects" class="btn">See My Work</a>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="content">
-        <h1>About Me</h1>
-        <p>
-          I’m a passionate developer with a love for building user-friendly,
-          responsive web applications. With expertise in front-end technologies
-          and a focus on seamless user experiences, I bring ideas to life.
-        </p>
-      </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-      <div class="projects-container">
-        <!-- Side table for listing projects -->
-        <div class="project-list">
-          <ul>
-            <li data-project="project1" class="active">Project 1</li>
-            <li data-project="project2">Project 2</li>
-            <li data-project="project3">Project 3</li>
-            <li data-project="project4">Project 4</li>
-          </ul>
+    <div class="wrapper">
+      <section id="home">
+        <div class="content">
+          <h1 class="intro" id="name">Hello, I'm <span> Apurv</span></h1>
+          <p>Creative Developer | Problem Solver | Tech Enthusiast</p>
+          <a href="#projects" class="btn">See My Work</a>
         </div>
+      </section>
 
-        <!-- Project details area -->
-        <div class="project-details">
-          <div id="project-content">
-            <h2>Project 1</h2>
-            <p>
-              Description of Project 1. This is where more detailed information
-              about the project will go.
-            </p>
+      <section id="about">
+        <div class="content">
+          <h1>About Me</h1>
+          <p>
+            I’m a passionate developer with a love for building user-friendly,
+            responsive web applications. With expertise in front-end
+            technologies and a focus on seamless user experiences, I bring ideas
+            to life.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <div class="content">
+          <h1 id="project-heading">Projects</h1>
+          <div class="projects-container">
+            <div class="project-list">
+              <ul>
+                <li data-project="project1" class="active">Project 1</li>
+                <li data-project="project2">Project 2</li>
+                <li data-project="project3">Project 3</li>
+                <li data-project="project4">Project 4</li>
+              </ul>
+            </div>
+
+            <!-- Project details area -->
+            <div class="project-details">
+              <div id="project-content">
+                <h2>Project 1</h2>
+                <p>
+                  Description of Project 1. This is where more detailed
+                  information about the project will go.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <div class="content">
-        <h1>Get In Touch</h1>
-        <p>
-          Have a project in mind or just want to say hi? Feel free to reach out!
-        </p>
-        <div class="social-icons">
-          <a class="social-icon social-icon--codepen">
-            <i class="fa fa-codepen"></i>
-            <div class="tooltip">Codepen</div>
-          </a>
-          <a
-            href="https://github.com/Apurv-01"
-            class="social-icon social-icon--github"
-          >
-            <i class="fa fa-github"></i>
-            <div class="tooltip">Github</div>
-          </a>
-          <a class="social-icon social-icon--twitter">
-            <i class="fa fa-twitter"></i>
-            <div class="tooltip">Twitter</div>
-          </a>
-          <a class="social-icon social-icon--dribbble">
-            <i class="fa fa-dribbble"></i>
-            <div class="tooltip">Dribbble</div>
-          </a>
-          <a class="social-icon social-icon--instagram">
-            <i class="fa fa-instagram"></i>
-            <div class="tooltip">Instagram</div>
-          </a>
-          <a class="social-icon social-icon--linkedin">
-            <i class="fa fa-linkedin"></i>
-            <div class="tooltip">LinkedIn</div>
-          </a>
-          <a class="social-icon social-icon--facebook">
-            <i class="fa fa-facebook"></i>
-            <div class="tooltip">Facebook</div>
-          </a>
+      <section id="contact">
+        <div class="content">
+          <h1>Get In Touch</h1>
+          <p>
+            Have a project in mind or just want to say hi? Feel free to reach
+            out!
+          </p>
+          <div class="social-icons">
+            <a class="social-icon social-icon--codepen">
+              <i class="fa fa-codepen"></i>
+              <div class="tooltip">Codepen</div>
+            </a>
+            <a
+              href="https://github.com/Apurv-01"
+              class="social-icon social-icon--github"
+            >
+              <i class="fa fa-github"></i>
+              <div class="tooltip">Github</div>
+            </a>
+            <a class="social-icon social-icon--twitter">
+              <i class="fa fa-twitter"></i>
+              <div class="tooltip">Twitter</div>
+            </a>
+
+            <a class="social-icon social-icon--instagram">
+              <i class="fa fa-instagram"></i>
+              <div class="tooltip">Instagram</div>
+            </a>
+            <a class="social-icon social-icon--linkedin">
+              <i class="fa fa-linkedin"></i>
+              <div class="tooltip">LinkedIn</div>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <script
       src="https://kit.fontawesome.com/cdca584817.js"
       crossorigin="anonymous"
