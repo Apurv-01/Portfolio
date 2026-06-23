@@ -25,11 +25,11 @@
 
 // window.onload = setTextColorBasedOnWallpaper;
 // window.onresize = setTextColorBasedOnWallpaper;
-document.addEventListener('DOMContentLoaded', function () {
-  const sections = document.querySelectorAll('section');
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
   let isScrolling = false;
 
-  window.addEventListener('wheel', function (event) {
+  window.addEventListener("wheel", function (event) {
     if (isScrolling) return;
 
     const direction = event.deltaY > 0 ? 1 : -1;
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         isScrolling = true;
 
         nextSection.scrollIntoView({
-          behavior: 'smooth',
+          behavior: "smooth",
         });
 
         setTimeout(() => {
@@ -63,39 +63,34 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const projectListItems = document.querySelectorAll('.project-list ul li');
-  const projectContent = document.getElementById('project-content');
+document.addEventListener("DOMContentLoaded", function () {
+  const projectListItems = document.querySelectorAll(".project-list ul li");
+  const projectContent = document.getElementById("project-content");
 
   const projects = {
     project1: {
-      title: 'Project 1',
+      title: "Code-Sync",
       description:
-        'Description of Project 1. This is where more detailed information about the project will go.',
+        "A innovative product which focuses on encrypted sharing of sensitive information like code, passwords, api keys across internet. ",
     },
     project2: {
-      title: 'Project 2',
+      title: "Socio",
       description:
-        'Description of Project 2. More information about this project can be displayed here.',
+        "Working on a full fledged community driven social media application. With all the essential things required to elevate your social life",
     },
     project3: {
-      title: 'Project 3',
+      title: "Mythify",
       description:
-        'Description of Project 3. This project involves interesting features and technologies.',
-    },
-    project4: {
-      title: 'Project 4',
-      description:
-        'Description of Project 4. Explore more details about this project here.',
+        "Working on a collabrative story writting platform with a twist. Publish your stories and let other people contribute to it",
     },
   };
 
   projectListItems.forEach((item) => {
-    item.addEventListener('click', function () {
-      projectListItems.forEach((li) => li.classList.remove('active'));
-      this.classList.add('active');
+    item.addEventListener("click", function () {
+      projectListItems.forEach((li) => li.classList.remove("active"));
+      this.classList.add("active");
 
-      const projectId = this.getAttribute('data-project');
+      const projectId = this.getAttribute("data-project");
       projectContent.innerHTML = `
               <h2>${projects[projectId].title}</h2>
               <p>${projects[projectId].description}</p>
@@ -103,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const menuIcon = document.getElementById('menu-icon');
-  const navLinks = document.getElementById('nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.getElementById("nav-links");
 
-  menuIcon.addEventListener('click', function () {
-    navLinks.classList.toggle('show');
+  menuIcon.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
   });
 });

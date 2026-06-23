@@ -56,7 +56,7 @@ body {
 }
 
 .navbar ul li a {
-  color: #1290ce;
+  color: #ff6871;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 400;
@@ -64,7 +64,7 @@ body {
 }
 
 .navbar ul li a:hover {
-  color: #ff6347;
+  color: #f8c8da;
 }
 
 section {
@@ -100,11 +100,11 @@ section::before {
 }
 
 #projects {
-  background: url('./assets/LoginImg.jpg') no-repeat center center/cover;
+  background: url('./assets/937737.jpg') no-repeat center center/cover;
 }
 
 #contact {
-  background: url('./assets/anime-landscape-street-buildings-trees.jpeg')
+  background: url('./assets/1181009.jpg')
     no-repeat center center/cover;
 }
 
@@ -164,7 +164,7 @@ section::before {
   display: flex;
   height: 50vh;
   position: absolute;
-  left: 0;
+  left: 5%;
   width: 80%;
 }
 
@@ -181,7 +181,7 @@ section::before {
 
 .project-list ul {
   list-style-type: none;
-  width: 70%;
+  width: 90%;
   padding: 0;
 }
 
@@ -415,7 +415,7 @@ section::before {
   }
   .projects-container {
     justify-content: center;
-    width: 100vw;
+    width: 90vw;
   }
   .project-list ul li {
     padding-left: 0;
